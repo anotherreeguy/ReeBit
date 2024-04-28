@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ReeBit Minecraft Server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Resetting Default Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0c180dc2;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            color: #4CAF50;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+
+        /* Additional Styling */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            background: linear-gradient(to right, #4CAF50, #45a049);
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero:hover::before {
+            opacity: 0.6;
+        }
+
+        .about, .details, .rules {
+            background: #f2f3f4;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .details ul li {
+            margin-bottom: 10px;
+        }
+
+        .rules ol {
+            list-style: decimal;
+            margin-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to ReeBit Minecraft Server</h1>
+        <p>A non pay to win Minecraft server!</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <h2>About ReeBit</h2>
+            <p>At ReeBit, we're committed to providing an inclusive and fair experience for players of all levels. Dive into a world without any crates, keys or anything pay to win!</p>
+        </section>
+        
+        <section class="details">
+            <h2>Server Details</h2>
+            <ul>
+                <li><strong>Server IP:</strong> play.reeguy.nl</li>
+                <li><strong>Port:</strong> 2280</li>
+                <li><strong>Platform:</strong> Java & Bedrock</li>
+            </ul>
+            <a href="minecraft://?addExternalServer=bedrock.reeguy.nl|bedrock.reeguy.nl:2280" class="btn">Join ReeBit on Bedrock.</a>
+        </section>
+        
+        <section class="rules">
+            <h2>Rules</h2>
+            <ol>
+                <li>Don't beg for ranks.</li>
+                <li>No cheating or hacking.</li>
+                <li>Be mindful of language and behavior in chat.</li>
+                <li>Have fun and enjoy the game!</li>
+            </ol>
+        </section>
+        
+        <div class="social-links">
+            <p>Connect with Us:</p>
+            <a href="https://discord.gg/reebit" target="_blank" class="social-link"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/ReeBitServer" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/reebit_minecraft/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <script>
+        let typedText = '';
+        const secretText = 'reeguy';
+        const newText = 'never gonna give you up';
+
+        document.addEventListener('keypress', function(event) {
+            typedText += event.key.toLowerCase();
+            if (typedText.includes(secretText)) {
+                const allTextElements = document.querySelectorAll('h1, h2, p, li, a');
+                allTextElements.forEach(element => {
+                    element.innerText = newText;
+                });
+                typedText = '';
+                // Open a new window with "Never Gonna Give You Up" video
+                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'You typed ReeGuy!', 'width=600,height=400');
+            }
+        });
+    </script>
+</body>
+</html>
